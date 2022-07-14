@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embeding Canvas Into HTML Page</title>
+</head>
+    <script>
+    window.onload = function(){
+        var canvas = document.getElementById("my canvas");
+        var context = canvas.getContext("2d");
+
+        //draw stuff here
+        //moveTo(x,y)
+        //lineTo(x,y)
+        //stroke()
+
+        //context.moveTo(250,330);
+        //context.lineTo(250,460);
+        //context.stroke();
+    };
+    // rectangle
+    //context.rect(x,y,width,height);
+    window.onload = function(){
+    var canvas = document.getElementById("my canvas");
+        var context = canvas.getContext("2d");
+        context.rect(50,50,200,100);
+        context.lineWidth=10;
+        context.fillStyle = "green";
+        context.fill();
+        context.strokeStyle = "red"; 
+        context.stroke();
+    };
+    
+    // Circle
+
+    // window.onload = function(){
+    // var canvas = document.getElementById("my canvas");
+    //     var context = canvas.getContext("2d");
+    //     //context.arc(centerX, centerY, radius,0, 2*Math.PI, false)
+    //     // if we change fro 0 to any value like 1.2or1.3 then it will take the shape of Arc  
+    //     context.arc(150,150,80,0,2*Math.PI,false);
+    //     context.lineWidth=30;
+    //     context.fillStyle = "green";
+    //     context.fill();
+    //     context.strokeStyle = "red";  
+    //     context.stroke();
+    // };
+
+    
+
+
+</script>
+<style>
+    canvas {
+        border: 2px solid black;
+        
+        background: lightgreen;
+    }
+</style>
+<body style="background-color:lightyellow">
+    <canvas id="my canvas" width="600" height="400"></canvas>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        canvas {
+            background-color: lightyellow;
+        }
+    </style>
+
+</head>
+<body>
+   <h1>First Assignment</h1>
+   <div>
+    <button onclick="playPause()">Play/Pause</button>
+    <button onclick="makeBig()">Big</button>
+    <button onclick="makeSmall()">Small</button>
+    <button onclick="makeNormal()">Normal</button>
+    <br><br>
+      <h3>VideoClip</h3>
+
+      <video width="320" height="240" controls>
+        <source src="/istockphoto-1218838426-640_adpp_is.mp4" type="video/mp4">
+        <source src="/istockphoto-1218838426-640_adpp_is.mp4" type="video/ogg">
+        <br>
+      </video>
+      <br>
+      <br>
+      <h2>Second Assignment</h2>
+      <h2><p>Image to use:</p></h2>
+    <img id="scream" src="/image.jpg" alt="The Scream" width="350" height="300">
+
+
+     <h3><p>Canvas to fill:</p></h3>
+    <canvas id="myCanvas" width="350" height="300" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+      
+
+
+
+    <script>
+     var myVideo = document.getElementById("video1");
+
+function playPause() {
+    if (myVideo.paused)
+        myVideo.play();
+    else
+        myVideo.pause();
+}
+
+function makeBig() {
+    myVideo.width = 560;
+}
+
+function makeSmall() {
+    myVideo.width = 320;
+}
+
+function makeNormal() {
+    myVideo.width = 420;
+}
+
+window.onload = function () {
+    setTimeout(displayCanvas, 5000);
+
+}
+function displayCanvas() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("scream");
+    ctx.drawImage(img, 30, 30);
+}
+</script>
+</body>
+</html>
